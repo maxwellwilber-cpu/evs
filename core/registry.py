@@ -229,6 +229,8 @@ SCHEMA_REGISTRY = {
         _col("one_time_items_flagged",             "enum",           enum_key="yn_flag"),
         _col("retry_count",                        "int"),
         _col("retry_log",                          "json_list_obj"),
+        # Added 2026-03-23: Sign correction audit trail from Normalization Engine
+        _col("sign_corrections",                   "json_list_str", required=False),
     ],
 
     # ------------------------------------------------------------------
