@@ -1,0 +1,3 @@
+run_id,period_key,line_item,amount,segment_key,source_file_id
+RUN-DEMO-20260315-001,2025-01,Cash,58700.00,TOTAL,F002
+RUN-DEMO-20260315-001,2025-01,CurrentAssets,91200.00,TOTAL,F002

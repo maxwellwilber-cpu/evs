@@ -1,0 +1,4 @@
+run_id,driver_id,category,driver_class,direction,outcome_impacted,evidence_metric_ids,evidence_claim_ids,constraints_linked,confidence,driver_notes
+RUN-DEMO-20260315-001,DX-RUN-DEMO-20260315-001-OPEX-001,OPEX,Confirmed,-,Operating margin,"[""M013"",""M015""]","[""CL-RUN-DEMO-20260315-001-OPEX-0001""]",[],High,High coaching costs relative to revenue
+RUN-DEMO-20260315-001,DX-RUN-DEMO-20260315-001-REV-001,REV,Likely,+,Revenue growth,"[""M001""]","[""CL-RUN-DEMO-20260315-001-REV-0001""]",[],Medium,Camp enrollment trending up
+RUN-DEMO-20260315-001,DX-RUN-DEMO-20260315-001-MAR-001,MAR,Confirmed,-,Gross margin,"[""M012""]","[""CL-RUN-DEMO-20260315-001-MAR-9999""]",[],High,INTENTIONAL: references non-existent claim_id

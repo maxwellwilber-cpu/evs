@@ -1,0 +1,7 @@
+run_id,period_key,account_name_original,account_name_normalized,account_bucket,account_category,amount,segment_key,source_file_id
+RUN-DEMO-20260315-001,2025-01,Camp Registration Fees,Camp Registration Fees,Revenue,Core Revenue,61500.00,TOTAL,F001
+RUN-DEMO-20260315-001,2025-01,League Enrollment,League Enrollment,Revenue,Core Revenue,34800.00,TOTAL,F001
+RUN-DEMO-20260315-001,2025-01,Coach Salaries,Coach Salaries,OpEx,Payroll,42000.00,TOTAL,F001
+RUN-DEMO-20260315-001,2025-01,Field Lease,Field Lease,OpEx,Rent/Occupancy,8500.00,TOTAL,F001
+RUN-DEMO-20260315-001,2025-01,Equipment Returns,Equipment Returns,OpEx,Admin/Overhead,-2200.00,TOTAL,F001
+RUN-DEMO-20260315-001,2025-02,Referee Fees,Referee Fees,OpEx,Admin/Overhead,3100.00,TOTAL,F999

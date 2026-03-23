@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+.DS_Store
+output/
+00_evs-spec-from-fas*
+*.pyc

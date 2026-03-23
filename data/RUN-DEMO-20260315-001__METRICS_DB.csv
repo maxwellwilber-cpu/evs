@@ -1,0 +1,9 @@
+run_id,metric_id,metric_name,period_key,segment_key,value,unit,formula_reference,required_inputs,constraints,status,confidence,calc_notes,file_ids_used
+RUN-DEMO-20260315-001,M001,Total Revenue (Net),2025-01,TOTAL,96300.00,currency,REVENUE_NET = SUM(Revenue) - SUM(Contra-Revenue),PNL_FACT Revenue bucket,None,Calculated,High,No contra-revenue detected,"[""F001""]"
+RUN-DEMO-20260315-001,M013,Operating Expenses,2025-01,TOTAL,53700.00,currency,OPEX = SUM(OpEx),PNL_FACT OpEx bucket,None,Calculated,High,,"[""F001""]"
+RUN-DEMO-20260315-001,M040,Cash Balance,2025-01,TOTAL,58700.00,currency,CASH = BS_FACT(line_item=Cash),BS_FACT,None,Calculated,High,,"[""F002""]"
+RUN-DEMO-20260315-001,M001,Total Revenue (Net),2025-01,TOTAL,96300.00,currency,REVENUE_NET = SUM(Revenue),PNL_FACT Revenue bucket,None,Calculated,High,duplicate row,"[""F001""]"
+RUN-DEMO-20260315-001,M020,Labor Pct,2025-01,TOTAL,,percent,LABOR_TOTAL / M001,Labor categories + M001,M001 > 0,Calculated,High,,"[""F001""]"
+RUN-DEMO-20260315-001,M050,Revenue Concentration,2025-01,TOTAL,,count,TopCustomer/TotalRevenue,Customer-level detail,Data available,NotCalculated,Low,,"[""F001""]"
+RUN-DEMO-20260315-001,M015,Operating Margin %,2025-01,TOTAL,0.44,percent,OM = M014 / M001,"M014, M001",M001 > 0,Calculated,High,Healthy margin,"[""F001""]"
+RUN-DEMO-20260315-001,M999,Custom Metric,2025-01,TOTAL,999.00,currency,custom,custom,None,Calculated,Medium,unapproved,"[""F001""]"

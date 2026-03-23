@@ -1,0 +1,3 @@
+run_id,vn_id,category,uncertainty_or_gap,why_it_matters,minimum_data_needed,how_to_obtain,decisions_impacted,linked_claim_ids,confidence_impact_if_resolved
+RUN-DEMO-20260315-001,VN-RUN-DEMO-20260315-001-DATA-001,DATA,Owner compensation not identified,Cannot produce accurate EBITDA proxy,Owner salary and distribution amounts,Ask owner for comp details,EBITDA and profitability analysis,[],High
+RUN-DEMO-20260315-001,VN-RUN-DEMO-20260315-001-CASH-001,CASH,Cash runway basis unknown,,Cash flow statement or bank statements,Request from accountant,Cash planning decisions,[],Medium

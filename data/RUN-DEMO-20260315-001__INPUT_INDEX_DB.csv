@@ -1,0 +1,3 @@
+run_id,file_id,file_name,report_type,frequency,date_range_start,date_range_end,accounting_basis,source_system,notes
+RUN-DEMO-20260315-001,F001,Riverside_PnL_2025.csv,PnL,Monthly,2025-01-01,2025-06-30,accrual,Xero,
+RUN-DEMO-20260315-001,F002,Riverside_BS_2025.csv,BalanceSheet,Monthly,2025-01-01,2025-06-30,accrual,Xero,
