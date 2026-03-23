@@ -25,6 +25,7 @@ from core.types import ValidationFinding
 from core.registry import (
     SCHEMA_REGISTRY, ENUMS, ID_PATTERNS, PRIMARY_KEYS,
     LAYER_TABLES, APPROVED_METRIC_IDS, UNCERTAIN_TRUTH_LABELS,
+    is_valid_period_key,
 )
 
 STAGE = "5V"
@@ -529,7 +530,7 @@ def check_5v_11(pack):
                     "claim_id": row["claim_id"],
                     "issue": f"bad metric_id format: {obj.get('metric_id')}",
                 })
-            if not re.match(ID_PATTERNS["date_ym"], str(obj.get("period_key", ""))):
+            if not is_valid_period_key(obj.get("period_key", "")):
                 bad_objects.append({
                     "claim_id": row["claim_id"],
                     "issue": f"bad period_key format: {obj.get('period_key')}",

@@ -7,6 +7,8 @@ Source: EVS Spec Reference (extracted from FAS v2.1.0, VCR-1.2)
 No logic lives in this file — just data definitions.
 """
 
+import re
+
 
 # ===========================================================================
 # 1. ID FORMAT PATTERNS (regex)
@@ -609,6 +611,17 @@ RETIRED_CHECKS = {
 # ===========================================================================
 # 10. HELPER: Get expected columns for a table
 # ===========================================================================
+
+# Updated 2026-03-23: Accept TTM and SEASONAL-XX period keys per Agent 1 metric expansion (M052-M059)
+_VALID_PERIOD_KEY_RE = re.compile(
+    r"^(?:\d{4}-(0[1-9]|1[0-2])|TTM|SEASONAL-(0[1-9]|1[0-2]))$"
+)
+
+
+def is_valid_period_key(value):
+    """Check if a period_key is valid: YYYY-MM, TTM, or SEASONAL-01 through SEASONAL-12."""
+    return bool(_VALID_PERIOD_KEY_RE.match(str(value)))
+
 
 def get_expected_columns(table_name):
     """Return the ordered list of expected column names for a table."""

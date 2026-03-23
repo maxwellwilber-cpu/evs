@@ -18,7 +18,7 @@ import json
 from core.types import ValidationFinding
 from core.registry import (
     SCHEMA_REGISTRY, ENUMS, ID_PATTERNS, PRIMARY_KEYS,
-    APPROVED_METRIC_IDS, get_expected_columns,
+    APPROVED_METRIC_IDS, get_expected_columns, is_valid_period_key,
 )
 
 STAGE = "3V"
@@ -146,9 +146,8 @@ def check_3v_02(pack):
     if df is None or df.empty:
         return findings
 
-    # period_key format
-    date_ym = ID_PATTERNS["date_ym"]
-    bad_pk = df[~df["period_key"].apply(lambda v: bool(re.match(date_ym, str(v))))]
+    # period_key format — accepts YYYY-MM, TTM, and SEASONAL-XX (01-12)
+    bad_pk = df[~df["period_key"].apply(is_valid_period_key)]
     if not bad_pk.empty:
         findings.append(_make_finding(
             pack, "SCV-3V-02", "BLOCKER", "METRICS_DB", "period_key",
