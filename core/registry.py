@@ -101,6 +101,10 @@ APPROVED_METRIC_IDS = {
     "M030", "M031", "M032", "M033",
     "M040", "M041", "M042", "M043", "M044",
     "M050", "M051",
+    # M052–M059 added per Agent 1 Metrics Expansion (2026-03-02).
+    # These metrics are live in the pipeline as of RUN-BCBA-20260302-001
+    # and validated by EVS regression.
+    "M052", "M053", "M054", "M055", "M056", "M057", "M058", "M059",
 }
 
 
