@@ -1,6 +1,6 @@
 # EVS — External Validation Script
 
-A Python validation framework that tests AI-generated financial analysis output. Built as the coded counterpart to the [FAS (Financial Analysis System)](https://github.com/) — a 20+ node AI pipeline with 63 validation checks across 14 governed tables.
+A Python validation framework that tests AI-generated financial analysis output. Built as the coded counterpart to the FAS (Financial Analysis System) — a 27-node AI pipeline on Vellum with 73 validation checks across 14 governed tables. The FAS pipeline and its specification are maintained in a private repository.
 
 The FAS runs on Vellum's visual platform. The EVS proves the same validation thinking can be implemented in Python: data ingestion, pandas transformation, staged validation, pytest coverage, and formatted output.
 

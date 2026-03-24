@@ -4,3 +4,4 @@ __pycache__/
 output/
 00_evs-spec-from-fas*
 *.pyc
+regression_runs/
